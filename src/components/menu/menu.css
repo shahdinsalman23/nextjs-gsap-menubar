@@ -1,0 +1,121 @@
+.menu-bar, .menu-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu-bar a, .menu-open p {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-close p {
+    color: #000;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    background: #6dc6cd;
+    z-index: 2;
+    display: flex;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-overlay-bar {
+    position: absolute;
+    top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 35px;
+    left: 30px;
+}
+
+.menu-close-icon {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    height: 100%;
+}
+
+.menu-copy {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 8em;
+    height: 100%;
+}
+
+.menu-preview {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.menu-close-icon p{
+    font-size: 100px;
+    -webkit-text-stroke: 3px #6dc6cd !important;
+    line-height: 70%;
+}
+
+.menu-link-item {
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 0px 0px 10px 0px;
+}
+
+.menu-link-item-holder {
+    position: relative;
+}
+
+.menu-link-item-holder a {
+    color: #000;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+    transition: all .6s ease;
+}
+
+.menu-link-item-holder a:hover {
+    letter-spacing: 10px;
+}
+
+.menu-info {
+    display: flex;
+}
+
+.menu-info-col  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+    .menu-close-icon {
+        display: none;
+    }
+    .menu-copy {
+        padding-top: 8em;
+    }
+    .menu-link-item-holder a {
+        font-size: 60px;
+    }
+}
